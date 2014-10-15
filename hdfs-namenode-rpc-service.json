@@ -1,0 +1,10 @@
+{
+  "id": "hdfsnamenoderpc",
+  "kind": "Service",
+  "apiVersion": "v1beta1",
+  "port": 20001,
+  "containerPort": 8020,
+  "selector": {
+    "name": "hdfs-namenode"
+  }
+}

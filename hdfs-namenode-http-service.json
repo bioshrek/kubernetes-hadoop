@@ -1,0 +1,10 @@
+{
+  "id": "hdfsnamenodehttp",
+  "kind": "Service",
+  "apiVersion": "v1beta1",
+  "port": 20000,
+  "containerPort": 50070,
+  "selector": {
+    "name": "hdfs-namenode"
+  }
+}
