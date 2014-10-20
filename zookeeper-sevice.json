@@ -1,0 +1,10 @@
+{
+  "id": "zookeeperclient",
+  "kind": "Service",
+  "apiVersion": "v1beta1",
+  "port": 30000,
+  "containerPort": 2181,
+  "selector": {
+    "name": "zookeeper"
+  }
+}
