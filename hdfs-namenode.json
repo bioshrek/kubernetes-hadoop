@@ -21,10 +21,10 @@
 		  "mountPath": "/home/chianyu/shared_with_docker_container/hadoop-log-dir"
 		}, {
                   "name": "hadoop-hdfs-namenode-dir",
-                  "mountPath": "/home/chianyu/shared_with_docker_container/cdh4/nn"
+                  "mountPath": "/home/chianyu/shared_with_docker_container/cdh5/nn"
                 }, {
                   "name": "hadoop-hdfs-datanode-dir",
-                  "mountPath": "/home/chianyu/shared_with_docker_container/cdh4/dn"
+                  "mountPath": "/home/chianyu/shared_with_docker_container/cdh5/dn"
                 }]
       }],
 	  "volumes": [{
@@ -38,14 +38,14 @@
             "name": "hadoop-hdfs-namenode-dir",
             "source": {
               "hostDir": {
-                "path": "/home/chianyu/shared_with_docker_container/cdh4/nn"
+                "path": "/home/chianyu/shared_with_docker_container/cdh5/nn"
               }
             }
           }, {
             "name": "hadoop-hdfs-datanode-dir",
             "source": {
               "hostDir": {
-                "path": "/home/chianyu/shared_with_docker_container/cdh4/dn"
+                "path": "/home/chianyu/shared_with_docker_container/cdh5/dn"
               }
             }
           }]
