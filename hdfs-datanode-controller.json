@@ -1,61 +1,72 @@
 {
-  "id": "hdfsDatanodeController",
-  "kind": "ReplicationController",
-  "apiVersion": "v1beta1",
-  "desiredState": {
-    "replicas": 2,
-    "replicaSelector": {"name": "hdfs-datanode"},
-    "podTemplate": {
-      "desiredState": {
-        "manifest": {
-        "version": "v1beta1",
-        "id": "hdfs-datanode",
-        "containers": [{
-          "name": "hadoop-hdfs-datanode",
-          "image": "bioshrek/hadoop-hdfs-datanode:cdh5",
-          "ports": [{
-            "containerPort": 50010,
-            "hostPort": 50010
-          }, {
-            "containerPort": 50020,
-            "hostPort": 50020
-          }],
-                  "volumeMounts": [{
-                    "name": "hadoop-hdfs-log-dir",
-                    "mountPath": "/home/chianyu/shared_with_docker_container/hadoop-log-dir"
-                  }, {
-                    "name": "hadoop-hdfs-namenode-dir",
-                    "mountPath": "/home/chianyu/shared_with_docker_container/cdh5/nn"
-                  }, {
-                    "name": "hadoop-hdfs-datanode-dir",
-                    "mountPath": "/home/chianyu/shared_with_docker_container/cdh5/dn"
-                  }]
-        }],
-            "volumes": [{
-              "name": "hadoop-hdfs-log-dir",
-                  "source": {
-                    "hostDir": {
-                      "path": "/home/chianyu/shared_with_docker_container/hadoop-log-dir"
-                    }
-                  }
-            }, {
-              "name": "hadoop-hdfs-namenode-dir",
-              "source": {
-                "hostDir": {
-                  "path": "/home/chianyu/shared_with_docker_container/cdh5/nn"
+  "id" : "hdfsDatanodeController",
+  "kind" : "ReplicationController",
+  "apiVersion" : "v1beta1",
+  "desiredState" : {
+    "replicas" : 2,
+    "replicaSelector" : {
+      "name" : "hdfs-datanode"
+    },
+    "podTemplate" : {
+      "desiredState" : {
+        "manifest" : {
+          "version" : "v1beta1",
+          "id" : "hdfs-datanode",
+          "containers" : [{
+              "name" : "hadoop-hdfs-datanode",
+              "image" : "bioshrek/hadoop-hdfs-datanode:cdh5",
+              "ports" : [{
+                  "containerPort" : 50010,
+                  "hostPort" : 50010
+                }, {
+                  "containerPort" : 50020,
+                  "hostPort" : 50020
+                }
+              ],
+              "volumeMounts" : [{
+                  "name" : "hadoop-hdfs-log-dir",
+                  "mountPath" : "/home/chianyu/shared_with_docker_container/hadoop-log-dir"
+                }, {
+                  "name" : "hadoop-hdfs-namenode-dir",
+                  "mountPath" : "/home/chianyu/shared_with_docker_container/cdh5/nn"
+                }, {
+                  "name" : "hadoop-hdfs-datanode-dir",
+                  "mountPath" : "/home/chianyu/shared_with_docker_container/cdh5/dn"
+                }
+              ]
+            }
+          ],
+          "volumes" : [{
+              "name" : "hadoop-hdfs-log-dir",
+              "source" : {
+                "hostDir" : {
+                  "path" : "/home/chianyu/shared_with_docker_container/hadoop-log-dir"
                 }
               }
             }, {
-              "name": "hadoop-hdfs-datanode-dir",
-              "source": {
-                "hostDir": {
-                  "path": "/home/chianyu/shared_with_docker_container/cdh5/dn"
+              "name" : "hadoop-hdfs-namenode-dir",
+              "source" : {
+                "hostDir" : {
+                  "path" : "/home/chianyu/shared_with_docker_container/cdh5/nn"
                 }
               }
-            }]
+            }, {
+              "name" : "hadoop-hdfs-datanode-dir",
+              "source" : {
+                "hostDir" : {
+                  "path" : "/home/chianyu/shared_with_docker_container/cdh5/dn"
+                }
+              }
+            }
+          ]
+        }
+      },
+      "labels" : {
+        "name" : "hdfs-datanode"
       }
-      }, "labels": {"name": "hdfs-datanode"}
     }
   },
-  "labels": {"name": "hdfs-datanode"}
+  "labels" : {
+    "name" : "hdfs-datanode"
+  }
 }

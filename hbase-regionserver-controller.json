@@ -1,29 +1,38 @@
 {
-  "id": "hbaseRegionserverController",
-  "kind": "ReplicationController",
-  "apiVersion": "v1beta1",
-  "desiredState": {
-    "replicas": 2,
-    "replicaSelector": {"name": "hbase-regionserver"},
-    "podTemplate": {
-      "desiredState": {
-        "manifest": {
-        "version": "v1beta1",
-        "id": "hbase-regionserver",
-        "containers": [{
-          "name": "hbase-regionserver",
-          "image": "bioshrek/hbase-regionserver:cdh5",
-          "ports": [{
-            "containerPort": 60020,
-            "hostPort": 60020 
-          }, {
-            "containerPort": 60030,
-            "hostPort": 60030
-          }]
-        }]
+  "id" : "hbaseRegionserverController",
+  "kind" : "ReplicationController",
+  "apiVersion" : "v1beta1",
+  "desiredState" : {
+    "replicas" : 2,
+    "replicaSelector" : {
+      "name" : "hbase-regionserver"
+    },
+    "podTemplate" : {
+      "desiredState" : {
+        "manifest" : {
+          "version" : "v1beta1",
+          "id" : "hbase-regionserver",
+          "containers" : [{
+              "name" : "hbase-regionserver",
+              "image" : "bioshrek/hbase-regionserver:cdh5",
+              "ports" : [{
+                  "containerPort" : 60020,
+                  "hostPort" : 60020
+                }, {
+                  "containerPort" : 60030,
+                  "hostPort" : 60030
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "labels" : {
+        "name" : "hbase-regionserver"
       }
-      }, "labels": {"name": "hbase-regionserver"}
     }
   },
-  "labels": {"name": "hbase-regionserver"}
+  "labels" : {
+    "name" : "hbase-regionserver"
+  }
 }

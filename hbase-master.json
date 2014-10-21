@@ -1,25 +1,27 @@
 {
-  "id": "hbase-master",
-  "kind": "Pod",
-  "apiVersion": "v1beta1",
-  "desiredState": {
-    "manifest": {
-      "version": "v1beta1",
-      "id": "hbase-master",
-      "containers": [{
-        "name": "hbase-master",
-        "image": "bioshrek/hbase-master:cdh5",
-        "ports": [{
-          "containerPort": 60000,
-          "hostPort": 60000 
-        }, {
-          "containerPort": 60010,
-          "hostPort": 60010 
-        }]
-      }],
+  "id" : "hbase-master",
+  "kind" : "Pod",
+  "apiVersion" : "v1beta1",
+  "desiredState" : {
+    "manifest" : {
+      "version" : "v1beta1",
+      "id" : "hbase-master",
+      "containers" : [{
+          "name" : "hbase-master",
+          "image" : "bioshrek/hbase-master:cdh5",
+          "ports" : [{
+              "containerPort" : 60000,
+              "hostPort" : 60000
+            }, {
+              "containerPort" : 60010,
+              "hostPort" : 60010
+            }
+          ]
+        }
+      ],
     }
   },
-  "labels": {
-    "name": "hbase-master"
+  "labels" : {
+    "name" : "hbase-master"
   }
 }
