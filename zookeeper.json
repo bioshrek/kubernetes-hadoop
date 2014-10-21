@@ -15,8 +15,8 @@
             }
           ],
           "volumeMounts" : [{
-              "name" : "hadoop-hdfs-log-dir",
-              "mountPath" : "/home/chianyu/shared_with_docker_container/hadoop-log-dir"
+              "name" : "zookeeper-log-dir",
+              "mountPath" : "/home/chianyu/shared_with_docker_container/zookeeper-log-dir"
             }, {
               "name" : "zookeeper-data-dir",
               "mountPath" : "/home/chianyu/shared_with_docker_container/zookeeper"
@@ -25,10 +25,10 @@
         }
       ],
       "volumes" : [{
-          "name" : "hadoop-hdfs-log-dir",
+          "name" : "zookeeper-log-dir",
           "source" : {
             "hostDir" : {
-              "path" : "/home/chianyu/shared_with_docker_container/hadoop-log-dir"
+              "path" : "/home/chianyu/shared_with_docker_container/zookeeper-log-dir"
             }
           }
         }, {
