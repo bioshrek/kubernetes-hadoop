@@ -23,6 +23,7 @@
                   "hostPort" : 50020
                 }
               ],
+              "imagePullPolicy" : "PullIfNotPresent",
               "volumeMounts" : [{
                   "name" : "hadoop-hdfs-log-dir",
                   "mountPath" : "/home/chianyu/shared_with_docker_container/hadoop-log-dir"

@@ -16,7 +16,8 @@
               "containerPort" : 60010,
               "hostPort" : 60010
             }
-          ]
+          ],
+          "imagePullPolicy" : "PullIfNotPresent"
         }
       ],
     }
