@@ -23,7 +23,7 @@
                   "hostPort" : 60030
                 }
               ],
-              "imagePullPolicy" : "PullIfNotPresent"
+              "imagePullPolicy" : "PullNever"
             }
           ]
         }

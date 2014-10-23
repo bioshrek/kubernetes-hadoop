@@ -14,7 +14,7 @@
               "hostPort" : 2181
             }
           ],
-          "imagePullPolicy" : "PullIfNotPresent",
+          "imagePullPolicy" : "PullNever",
           "volumeMounts" : [{
               "name" : "zookeeper-log-dir",
               "mountPath" : "/home/chianyu/shared_with_docker_container/zookeeper-log-dir"
