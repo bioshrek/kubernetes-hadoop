@@ -23,7 +23,21 @@
                   "hostPort" : 60030
                 }
               ],
-              "imagePullPolicy" : "PullNever"
+              "imagePullPolicy" : "PullNever",
+              "volumeMounts" : [{
+                  "name" : "hbase-log-dir",
+                  "mountPath" : "/home/chianyu/shared_with_docker_container/hbase-log-dir"
+                }
+              ]
+            }
+          ],
+          "volumes" : [{
+              "name" : "hbase-log-dir",
+              "source" : {
+                "hostDir" : {
+                  "path" : "/home/chianyu/shared_with_docker_container/hbase-log-dir"
+                }
+              }
             }
           ]
         }
