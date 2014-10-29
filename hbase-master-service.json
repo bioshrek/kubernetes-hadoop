@@ -1,0 +1,10 @@
+{
+  "id": "hbasemasteripc",
+  "kind": "Service",
+  "apiVersion": "v1beta1",
+  "port": 40000,
+  "containerPort": 60000,
+  "selector": {
+    "name": "hbase-master"
+  }
+}
